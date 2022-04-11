@@ -1,12 +1,10 @@
 import racingcar.Prompt;
-import racingcar.RacingController;
-import racingcar.Rule;
 
 public class FormulaRacing {
     public static void main(String[] args) {
-        int countOfCar = Prompt.ask("레이싱에 참여할 자동차 대수를 입력해주세요.");
-        int maxAttempts = Prompt.ask("시도할 횟수는 몇 번인가요?");
+        String[] cars = Prompt.ask("경주할 자동차 이름을 입력하세요 (이름은 쉼표(,)를 기준으로 구분)");
+        int maxAttempts = Prompt.askAttempt("시도할 횟수는 몇 번인가요?");
 
-        RacingController.start(new Rule(countOfCar, maxAttempts));
+//        RacingController.start(new Rule(countOfCar, maxAttempts));
     }
 }
